@@ -16,7 +16,7 @@
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p class="meta">Agent Office &bull; Ironframe Apps &bull; com.ironframe.agentoffice<br>Last updated: November 5, 2026</p>
+  <p class="meta">Agent Office &bull; Ironframe Apps &bull; com.ironframe.agentoffice<br>Last updated: November 7, 2026</p>
 
   <p>Agent Office lets you chat with Claude, an AI assistant from Anthropic, inside a 3D office. This policy explains what happens to your information.</p>
 
@@ -31,7 +31,9 @@
   <ul>
     <li><strong>Messages.</strong> The text you send to Claude, together with your staff list, notes and purpose so Claude has context. It is sent over an encrypted connection to our server, and on to Anthropic, only to produce a reply. We do not store your messages or Claude's replies.</li>
     <li><strong>An anonymous account ID.</strong> The app creates it automatically; there is no sign-up and we never ask for your name or email. We keep it with a count of how much you used the service each day, to enforce limits and prevent abuse.</li>
-    <li><strong>Subscription check.</strong> If you subscribe, the app sends your Google Play purchase token with each message. Our server uses it only to ask Google Play whether your subscription is active, and keeps a one-way hash of the token and the answer.</li>
+    <li><strong>Generated pieces.</strong> When you ask the app to make a piece (furniture or a room), we store the description you typed, the finished image, and a balance of how many pieces you have left. The description is sent to our image-generation provider, Magnific, only to make that image. Pieces are kept in private storage tied to your anonymous account.</li>
+    <li><strong>Spoken replies (premium voice).</strong> When the premium voice is on, each sentence of Claude's reply is sent through our server to Google Cloud Text-to-Speech, which returns the audio. The text is used only to make that audio. We do not store the audio or the text, only a count of characters used per day to enforce a limit. If the premium voice is off or unavailable, the app reads replies with the voice built into your phone and nothing is sent.</li>
+    <li><strong>Piece purchases.</strong> When you buy a pack of pieces, the app sends the Google Play purchase token to our server. We use it only to confirm the purchase with Google Play, and keep a one-way hash of it so one purchase is never counted twice.</li>
     <li><strong>Your own API key (optional).</strong> If you add one, it is sent with each message through our server to Anthropic so the request can be made on your account. We use it only for that request and do not store or log it.</li>
   </ul>
 
@@ -39,15 +41,24 @@
   <ul>
     <li><strong>Anthropic</strong> generates Claude's replies and processes your messages under its own terms and privacy policy.</li>
     <li><strong>Supabase</strong> hosts our server and the anonymous account.</li>
-    <li><strong>Google Play</strong> handles purchases and subscriptions.</li>
+    <li><strong>Magnific</strong> makes the images for generated pieces from the description you type.</li>
+    <li><strong>Google Cloud Text-to-Speech</strong> turns Claude's reply text into spoken audio when the premium voice is on.</li>
+    <li><strong>Google Play</strong> handles purchases.</li>
   </ul>
   <p>We do not sell your data and we do not share it for advertising. The app has no ads and no analytics or tracking.</p>
+
+  <h2>Business Office and connected apps (optional)</h2>
+  <p>If you switch on Business Office, you can connect other services. These are off until you choose them.</p>
+  <ul>
+    <li><strong>QuickBooks (read-only).</strong> If you connect it, you approve access on Intuit's own page. We store the access tokens encrypted on our server and use them only to read your books when you ask a question about them. When you ask, a summary of the relevant figures is sent to Anthropic to write the answer. You can disconnect at any time in Settings, which deletes the tokens.</li>
+    <li><strong>Your app link.</strong> If you paste a webhook address (for example from Zapier or Make), the app sends a note to it only when you approve each send. We do not read the replies and do not store the address on our server.</li>
+  </ul>
 
   <h2>Computer Office (optional)</h2>
   <p>If you buy the Computer Office unlock, your phone talks directly to the companion app on your own computer. Nothing is relayed through our servers. What Claude can see and do on that computer is limited to the folders you choose, and anything beyond reading waits for your approval on your phone.</p>
 
   <h2 id="delete-data">Deleting your data</h2>
-  <p>Staff, notes and settings are removed when you uninstall the app or clear its data. To have your anonymous account ID and usage counts deleted from our server, email us and send the request from the same phone if you can.</p>
+  <p>Staff, notes and settings are removed when you uninstall the app or clear its data. To have your anonymous account ID, usage counts, generated pieces and any connected-app tokens deleted from our server, email us and send the request from the same phone if you can.</p>
 
   <h2>Children</h2>
   <p>Agent Office is not meant for anyone under 18.</p>
